@@ -28,18 +28,31 @@ describe("", function() {
 	});
 
 	it("get paid 12$/hr from start time to bedtime", function() {
-		expect(calculateHours(18, 2, 20)).toEqual(24+32);
+		expect(calculateHours(18, 2, 20)).toEqual(24+32+32);
 	});
 
 	it("get paid 12$/hr from start time to bedtime", function() {
-		expect(calculateHours(18, 2, 22)).toEqual(48+16);
+		expect(calculateHours(18, 2, 22)).toEqual(48+16+32);
 	});
 
 	it("get paid 8$/hr from bedtime to midnight", function() {
-		expect(calculateHours(18, 2, 20)).toEqual(24+32);
+		expect(calculateHours(18, 2, 20)).toEqual(24+32+32);
 	});
 
 	it("get paid 8$/hr from bedtime to midnight", function() {
-		expect(calculateHours(18, 2, 23)).toEqual(60+8);
+		expect(calculateHours(18, 2, 23)).toEqual(60+8+32);
+	});
+
+	it("get paid 16$/hr from midnight to end", function() {
+		expect(calculateHours(18, 2, 23)).toEqual(60+8+32);
+	});
+
+	it("get paid 16$/hr from midnight to end", function() {
+		expect(calculateHours(17, 3, 19)).toEqual(24+40+48);
+	});
+
+	// should still fail if end is after 5am
+	it("get paid 16$/hr from midnight to end", function() {
+		expect(calculateHours(17, 5, 19)).toEqual(false);
 	});
 });

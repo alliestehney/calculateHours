@@ -21,6 +21,9 @@ export function calculateHours(start, end, bedtime) {
 	if (checkStart(start) === true && checkEnd(end) === true) {
 		const earlyHours = bedtime - start;
 		const laterHours = 24 - bedtime;
-		return ((earlyHours*12) + (laterHours*8));
+		const latestHours = 0 + end;
+		return ((earlyHours*12) + (laterHours*8) + (latestHours*16));
+	} else {
+		return false;
 	}
 }

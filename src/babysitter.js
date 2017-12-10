@@ -22,4 +22,10 @@ export function calculateHours(start, end, bedtime) {
 		const hours = bedtime - start;
 		return hours*12;
 	}
+
+	if (checkEnd(end) === true) {
+		const laterHours = 24 - bedtime;
+		console.log(laterHours)
+		return laterHours*8;
+	}
 }

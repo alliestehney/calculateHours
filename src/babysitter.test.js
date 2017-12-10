@@ -34,4 +34,12 @@ describe("", function() {
 	it("get paid 12$/hr from start time to bedtime", function() {
 		expect(calculateHours(18, 2, 22)).toEqual(48);
 	});
+
+	it("get paid 8$/hr from bedtime to midnight", function() {
+		expect(calculateHours(18, 2, 20)).toEqual(32);
+	});
+
+	it("get paid 8$/hr from bedtime to midnight", function() {
+		expect(calculateHours(18, 2, 23)).toEqual(8);
+	});
 });

@@ -59,4 +59,8 @@ describe("", function() {
 	it("get paid 16$/hr from midnight to end", function() {
 		expect(calculateHours(17, 5, 19)).toEqual(false);
 	});
+
+	it("calculates full pay -- start at 6pm, end at 2am, bedtime at 9pm", function() {
+		expect(calculateHours(18, 2, 21)).toEqual(36+24+32);
+	});
 });

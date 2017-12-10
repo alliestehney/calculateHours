@@ -20,11 +20,15 @@ describe("", function() {
 	});
 
 	it("ends no later than 4am", function() {
-		expect(checkEnd(4)).toEqual(true);
+		expect(checkEnd(3)).toEqual(true);
 	});
 
 	it("ends no later than 4am", function() {
 		expect(checkEnd(7)).toEqual(false);
+	});
+
+	it("ends at 11PM -- no later than 4am", function() {
+		expect(checkEnd(23)).toEqual(true);
 	});
 
 	it("get paid 12$/hr from start time to bedtime", function() {

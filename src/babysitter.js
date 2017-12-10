@@ -1,5 +1,4 @@
-// input hours and get paid for work
-// using a 24 hour clock
+// input hours (24 hour clock) and get paid for work
 
 export function checkStart(start) {
 	if (start >= 17) {

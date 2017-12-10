@@ -18,14 +18,9 @@ export function checkEnd(end) {
 }
 
 export function calculateHours(start, end, bedtime) {
-	if (checkStart(start) === true) {
-		const hours = bedtime - start;
-		return hours*12;
-	}
-
-	if (checkEnd(end) === true) {
+	if (checkStart(start) === true && checkEnd(end) === true) {
+		const earlyHours = bedtime - start;
 		const laterHours = 24 - bedtime;
-		console.log(laterHours)
-		return laterHours*8;
+		return ((earlyHours*12) + (laterHours*8));
 	}
 }

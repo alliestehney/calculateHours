@@ -18,5 +18,8 @@ export function checkEnd(end) {
 }
 
 export function calculateHours(start, end, bedtime) {
-	
+	if (checkStart(start) === true) {
+		const hours = bedtime - start;
+		return hours*12;
+	}
 }

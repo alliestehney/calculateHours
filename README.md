@@ -1,3 +1,18 @@
+## RUNNING THIS APPLICATION
+- Once downloaded or cloned from GitHub, make sure you're in this project's directory
+- Do 'npm test' in the command line interface [within this project directory]
+- ^npm test will tell you if the tests for the babysitter functions pass
+- If no results show once you time in npm test because of files not having changed, type
+  'a' to run all test suites again.
+
+## MAIN FILES TO FOCUS ON
+- babysitter.js => includes the functions for calculating the babysitter's hours
+- babysitter.test.js => includes the tests for the babysitter functions
+
+
+
+## EVERYTHING BELOW IS ABOUT CREATE REACT APP 
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
